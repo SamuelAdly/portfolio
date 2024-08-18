@@ -1,4 +1,3 @@
-import { Home, FolderOpen, Mails, ScrollText, Handshake } from 'lucide-react';
 import { IoHomeSharp } from "react-icons/io5";
 import { FaHandshake, FaFolderOpen, FaScroll } from "react-icons/fa";
 import { FaMessage } from "react-icons/fa6";
