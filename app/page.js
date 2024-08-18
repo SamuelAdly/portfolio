@@ -1,6 +1,5 @@
 'use client'
 import Head from "next/head";
-import { ScrollText, Handshake } from 'lucide-react';
 import ScrollToTop from '@/components/scrolltotop'; 
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { AiOutlineOpenAI, AiOutlineHtml5 } from "react-icons/ai";

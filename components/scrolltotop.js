@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react';
-import { ArrowUp } from 'lucide-react'; // Import the icon
+import { FaArrowUp } from "react-icons/fa";
 
 export default function ScrollToTop() {
     const [isVisible, setIsVisible] = useState(false);
@@ -29,7 +29,7 @@ export default function ScrollToTop() {
             className={`fixed bottom-4 right-4 bg-gray-800 text-white p-3 rounded-full shadow-lg transition-transform duration-300 ease-in-out ${isVisible ? 'translate-y-0' : 'translate-y-full'}`}
             aria-label="Scroll to top"
         >
-            <ArrowUp className="h-6 w-6 text-blue-400" />
+            <FaArrowUp className="h-6 w-6 text-blue-400" />
         </button>
     );
 }
