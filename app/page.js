@@ -1,113 +1,214 @@
-import Image from "next/image";
+'use client'
+import Head from "next/head";
+import { ScrollText, Handshake } from 'lucide-react';
+import ScrollToTop from '@/components/scrolltotop'; 
+import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
+import { AiOutlineOpenAI, AiOutlineHtml5 } from "react-icons/ai";
+import { SiGooglegemini, SiClerk, SiVite, SiFirebase } from "react-icons/si";
+import { TbBrandVercel } from "react-icons/tb";
+import { FaCss3Alt, FaReact, FaStripe } from "react-icons/fa";
+import { DiJavascript } from "react-icons/di";
+import { SiStarbucks } from "react-icons/si"; // Starbucks icon
+import { GiCampingTent } from "react-icons/gi"; // GRYC icon
+import { FaCode } from "react-icons/fa";
+
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Head>
+        <title>Samuel Adly Portfolio</title>
+        <meta name="description" content="Samuel Adly Landing Page"/>
+      </Head>
+      <main>
+        {/* Welcome Section */}
+        <header className="relative bg-gray-800 overflow-hidden">
+            <div className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8 lg:py-32 text-center">
+                <h1 className="text-4xl font-bold sm:text-5xl lg:text-6xl tracking-tight text-blue-400">Welcome to my Portfolio</h1>
+                <p className="mt-6 text-xl sm:text-2xl">Dive into my world of development, from projects to professional growth</p>
+                <a href="#projects" className="mt-8 inline-block bg-gray-800 hover:bg-gray-600 border border-blue-400 text-blue-400 font-medium py-3 px-6 mr-2 rounded-md transition duration-150 ease-in-out">
+                    View Projects
+                </a>
+                <a href="/Resume.pdf" className="mt-8 inline-block bg-gray-800 hover:bg-gray-600 border border-blue-400 text-blue-400 font-medium py-3 px-6 rounded-md transition duration-150 ease-in-out" target="_blank" rel="noopener noreferrer">
+                View Resume
+                </a>
+            </div>
+        </header>
+
+        {/* Introduction Section */}
+        <section id="intro" className="py-16 sm:py-24">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 className="text-3xl font-bold sm:text-4xl tracking-tight text-blue-400">Introduction</h2>
+                <p className="mt-4 text-lg sm:text-xl">
+                  Hello and welcome! I`m Samuel Adly, a dedicated and enthusiastic developer with a passion for crafting innovative and impactful solutions. As a committed Computer Science major at Queens College, I`m excited to share a showcase of my projects, experiences, and the valuable knowledge I`ve accumulated during my academic journey. Thank you for exploring my portfolio—I hope you find it inspiring and insightful.
+                </p>
+            </div>
+            <div className="mt-4 text-center">
+              <a href="/intro" className="inline-block bg-gray-800 hover:bg-gray-600 border border-blue-400 text-blue-400 font-medium py-2 px-6 rounded-md transition duration-150 ease-in-out">
+                Full Introduction
+              </a>
+            </div>
+        </section>
+
+{/* Projects Section */}
+<section id="projects" className="py-16 sm:py-24 bg-gray-800">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold sm:text-4xl tracking-tight text-blue-400">Projects</h2>
+        <p className="mt-4 text-lg sm:text-xl">
+            Take a look at some of the projects I’ve worked on. Each one reflects my dedication to excellence and creativity
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            {/* Project 1 */}
+            <a href="NotDoneYetMustFinish" className="relative group bg-gray-700 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                <img
+                    src="Movo.jpg"
+                    alt="Movo"
+                    className="w-full h-64 object-cover rounded-lg"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+                    <h3 className="text-3xl font-bold text-blue-600">Movo</h3>
+                    <p className="mt-2 text-center">AI Powered Movie/TV Show Suggestion and Tracking Service</p>
+                    <div className="mt-4 flex space-x-4">
+                        <AiOutlineOpenAI/>
+                        <FaReact/>
+                        <DiJavascript/>
+                        <SiVite/>
+                        <TbBrandVercel/>
+                        <AiOutlineHtml5/>
+                        <RiTailwindCssFill/>
+                    </div>
+                </div>
+            </a>
+            {/* Project 2 */}
+            <a href="https://card-crafter.vercel.app/" className="relative group bg-gray-700 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                <img
+                    src="cardCrafter.png"
+                    alt="Card Crafter"
+                    className="w-full h-64 object-cover rounded-lg"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+                    <h3 className="text-3xl font-bold text-blue-600">Card Crafter</h3>
+                    <p className="mt-2 text-center">AI Powered Flashcard Creator, Storage, and Organization Service</p>
+                    <div className="mt-4 flex space-x-4">
+                        <AiOutlineOpenAI/>
+                        <FaReact/>
+                        <DiJavascript/>
+                        <TbBrandVercel/>
+                        <RiTailwindCssFill/>
+                        <FaCss3Alt/>
+                        <FaStripe/>
+                        <SiClerk/>
+                        <SiFirebase/>
+                        <RiNextjsLine/>
+                    </div>
+                </div>
+            </a>
+            {/* Project 3 */}
+            <a href="https://snkr-chat-bot.vercel.app/" className="relative group bg-gray-700 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                <img
+                    src="snkrs.png"
+                    alt="SNKRS Chat Bot"
+                    className="w-full h-64 object-cover rounded-lg"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
+                    <h3 className="text-3xl font-bold text-blue-600">SNKRS Chat Bot</h3>
+                    <p className="mt-2 text-center">AI Powered Chat Bot inspired By Nike SNKRS App</p>
+                    <div className="mt-4 flex space-x-4">
+                        <FaReact/>
+                        <DiJavascript/>
+                        <TbBrandVercel/>
+                        <RiTailwindCssFill/>
+                        <FaCss3Alt/>
+                        <SiGooglegemini/>
+                        <RiNextjsLine/>
+                    </div>
+                </div>
+            </a>
         </div>
-      </div>
+        <div className="mt-8 text-center">
+            <a href="/projects" className="inline-block bg-gray-800 hover:bg-gray-600 border border-blue-400 text-blue-400 font-medium py-3 px-6 rounded-md transition duration-150 ease-in-out">
+                View All Projects
+            </a>
+        </div>
+    </div>
+</section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        {/* Experience Section */}
+        <section id="experience" className="py-16 sm:py-24">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 className="text-3xl font-bold sm:text-4xl tracking-tight text-blue-400">Experience</h2>
+                <p className="mt-4 text-lg sm:text-xl">
+                    My professional journey is filled with learning and growth. Here`s a glimpse into my experiences across various roles and industries.
+                </p>
+                <div className="mt-8 space-y-8">
+                    <div className="flex">
+                        <div className="h-12 w-14 rounded-full bg-blue-500 flex items-center justify-center text-white">
+                            <FaCode className="h-6 w-6"/>
+                        </div>
+                            <div className="ml-4">
+                                <h4 className="text-xl font-bold text-blue-400">Headstarter AI Fellowship</h4>
+                                <p className="text-lg">July 2024-September 2024</p>
+                                <p className="mt-2">
+                                    <a href='https://headstarter.co/' target="_blank" className="text-blue-400 font-bold">Online Program</a><br />
+                                    • Engaged in a fellowship with intensive hands-on experience, enhancing Software Engineering skills through the development and deployment of diverse AI projects.<br />
+                                    • Collaborated effectively with fellow Software Engineers, contributing to team efforts and gaining valuable insights during hackathons and interview preparation.<br />
+                                    • Demonstrated adaptability and commitment by actively participating in a rigorous seven-week program, successfully balancing multiple project tasks and contributing to team success.
+                                </p>
+                            </div>
+                    </div>
+                    <div className="flex">
+                        <div className="h-12 w-12 rounded-full bg-blue-500 flex items-center justify-center text-white">
+                            <SiStarbucks className="h-6 w-6"/>
+                        </div>
+                        <div className="ml-4">
+                            <h3 className="text-2xl font-bold text-blue-400">Starbucks Team Member</h3>
+                            <p className="text-lg">June 2022 – Present</p>
+                            <p className="mt-2">
+                                <strong className="text-blue-400">Target Store 1344 Elmhurst, NY</strong><br />
+                                • Proven ability to deliver exceptional customer service, ensuring satisfaction and resolving issues effectively<br />
+                                • Demonstrated proficiency in collaborating with diverse teams to achieve goals in fast-paced environments<br />
+                                • Strong track record of efficiently managing multiple tasks, prioritizing responsibilities, and thriving in dynamic work settings
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex">
+                        <div className="h-12 w-12 rounded-full bg-blue-500 flex items-center justify-center text-white">
+                            <GiCampingTent className="h-6 w-6"/>
+                        </div>
+                        <div className="ml-4">
+                            <h3 className="text-2xl font-bold text-blue-400">Camp Counselor</h3>
+                            <p className="text-lg">July 2021 – August 2021</p>
+                            <p className="mt-2">
+                                <strong className="text-blue-400">GRYC Ozone Park, NY</strong><br />
+                                • Successfully led and mentored campers, fostering personal growth and creating a positive camp experience<br />
+                                • Effectively resolved conflicts and addressed challenges to ensure a safe and harmonious camp environment<br />
+                                • Designed and led engaging activities, fostering teamwork and creativity among campers while ensuring their safety and enjoyment
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="mt-8 text-center">
+                <a href="/experience" className="inline-block bg-gray-800 hover:bg-gray-600 border border-blue-400 text-blue-400 font-medium py-3 px-6 rounded-md transition duration-150 ease-in-out">
+                    View All Experiences
+                </a>
+                </div>
+        </section>
     </main>
-  );
+
+      {/* Footer */}
+    <footer className="bg-gray-900 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p className="text-sm text-gray-500">
+                &copy; {new Date().getFullYear()} Samuel Adly. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+      {/* Floating Scroll to Top Button */}
+    <ScrollToTop/>
+    </div>
+    );
 }
