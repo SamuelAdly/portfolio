@@ -58,7 +58,7 @@ export default function Home() {
         </p>
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {/* Project 1 */}
-            <a href="NotDoneYetMustFinish" className="relative group bg-gray-700 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+            <a href="https://movo-v2.vercel.app/" className="relative group bg-gray-700 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
                 <img
                     src="Movo.jpg"
                     alt="Movo"
@@ -71,10 +71,12 @@ export default function Home() {
                         <AiOutlineOpenAI/>
                         <FaReact/>
                         <DiJavascript/>
-                        <SiVite/>
                         <TbBrandVercel/>
                         <AiOutlineHtml5/>
                         <RiTailwindCssFill/>
+                        <SiFirebase/>
+                        <RiNextjsLine/>
+                        <SiClerk/>
                     </div>
                 </div>
             </a>

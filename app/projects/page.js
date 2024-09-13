@@ -26,7 +26,7 @@ export default function projects () {
                         </div>
                         <div className="mt-8 grid grid-cols-1 gap-10">
                             {/* Project 1 */}
-                            <a href="NotDoneYetMustFinish" className="relative group bg-gray-700 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 w-5/6 mx-auto h-96">
+                            <a href="https://movo-v2.vercel.app/" className="relative group bg-gray-700 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 w-5/6 mx-auto h-96">
                                 <img
                                     src="Movo.jpg"
                                     alt="Movo"
@@ -36,13 +36,15 @@ export default function projects () {
                                     <h3 className="text-3xl font-bold text-blue-600">Movo</h3>
                                     <p className="mt-2 text-center">AI Powered Movie/TV Show Suggestion and Tracking Service</p>
                                     <div className="mt-4 flex space-x-4">
-                                        <AiOutlineOpenAI/>
-                                        <FaReact/>
-                                        <DiJavascript/>
-                                        <SiVite/>
-                                        <TbBrandVercel/>
-                                        <AiOutlineHtml5/>
-                                        <RiTailwindCssFill/>
+                                    <AiOutlineOpenAI/>
+                                    <FaReact/>
+                                    <DiJavascript/>
+                                    <TbBrandVercel/>
+                                    <AiOutlineHtml5/>
+                                    <RiTailwindCssFill/>
+                                    <SiFirebase/>
+                                    <RiNextjsLine/>
+                                    <SiClerk/>
                                     </div>
                                 </div>
                             </a>
