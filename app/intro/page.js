@@ -1,3 +1,4 @@
+//Simple introduction page to introduce myself to visitors
 'use client'
 
 export default function Intro() {
@@ -23,7 +24,7 @@ export default function Intro() {
                         </p>
                         <div className="mt-8">
                             <a
-                                href="/Resume.pdf"  // Update with the actual path to your resume
+                                href="/Resume.pdf"
                                 className="inline-block px-6 py-3 rounded border-blue-400 text-blue-400 bg-gray-800  hover:bg-gray-600 border transition duration-300"
                                 aria-label="Download Resume"
                             >

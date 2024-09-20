@@ -1,3 +1,4 @@
+//projects page to display me work from other projects and team collaborations
 'use client'
 import { VscGithubAlt } from "react-icons/vsc";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";

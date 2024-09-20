@@ -1,3 +1,4 @@
+//Contact page for portfolio
 'use client'
 import { useState } from 'react';
 import { FaLinkedin, FaPhoneAlt } from "react-icons/fa";
@@ -11,20 +12,25 @@ export default function Contact() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submissionStatus, setSubmissionStatus] = useState('');
 
+    // Toggle phone number visibility. When its pressed the visitor can see or un-see phone number
     const togglePhoneVisibility = () => {
         setIsPhoneVisible(!isPhoneVisible);
     };
-
+    //when a user types something it gets updated in the formdata 
+    //example: user enters their name, now the formdata, in this case name, gets updated
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
     };
-
+    /*
+    - prevents the formdata from being submitted as its default values (this case blank), then it uses the emailjs services to send me an email with
+    name, email, and message so that i can contact them back
+    - if it works display it works then reset to default
+    - if fails tell the user it failed*/
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
         setSubmissionStatus('');
-
         try {
             await emailjs.sendForm(
                 'service_mxq012b',
@@ -42,8 +48,11 @@ export default function Contact() {
     };
 
     return (
+        //underneath div just to ensure that the page is the entire screens height
+        //dont think bg and text color are needed since later tags change the colors
         <div className="min-h-screen bg-gray-900 text-white">
             <header className="relative bg-gray-800 overflow-hidden">
+                {/*depending on screen size the padding and font properties change. Below it displays the contact page title, icons that can be clicked, and the contact form*/}
                 <div className="min-h-screen max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8 lg:py-32 text-center">
                     <h2 className="text-3xl font-bold sm:text-4xl tracking-tight text-blue-400 mb-8">Contact Me</h2>
                     <div className="flex justify-center space-x-4 mb-8">

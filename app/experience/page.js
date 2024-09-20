@@ -1,3 +1,4 @@
+//experience/Resume Page
 'use client'
 import ScrollToTop from '@/components/scrolltotop';
 import { SiStarbucks } from "react-icons/si"; // Starbucks icon
@@ -10,6 +11,7 @@ import { FaCode } from "react-icons/fa";
 
 export default function Experience() {
     return (
+        //underneath div just to ensure that the page is the entire screens height
         <div className="min-h-screen bg-gray-900 text-white">
             <header className="relative bg-gray-800 overflow-hidden py-16 sm:py-24">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
